@@ -70,7 +70,6 @@ export function Transactions() {
           </S.Transactions>
         </>
       )}
-
       {!isTransactionsPage && !isHome && (
         <S.Charts>
           <SplineChart></SplineChart>

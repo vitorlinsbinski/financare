@@ -38,6 +38,8 @@ export function Form() {
     setIdEdit,
   } = useContext(FormContext);
 
+  console.log("finaças:", finances);
+
   function generateId() {
     return Math.round(Math.random() * 10000);
   }

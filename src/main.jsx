@@ -23,15 +23,15 @@ const router = createBrowserRouter([
     element: <App></App>,
     children: [
       {
-        path: "/financare/",
+        path: "/financare",
         element: <Home></Home>,
       },
       {
-        path: "/financare/transactions",
+        path: "/transactions",
         element: <TransactionsPage></TransactionsPage>,
       },
       {
-        path: "/financare/charts",
+        path: "/charts",
         element: <ChartsPage></ChartsPage>,
       },
     ],

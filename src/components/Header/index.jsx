@@ -18,7 +18,7 @@ export function Header() {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink to="/financare">
                 <SquaresFour size={24} weight="duotone" />
               </NavLink>
             </li>
