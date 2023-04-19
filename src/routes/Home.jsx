@@ -76,9 +76,9 @@ export function Home() {
 
     const total = amountIncomes - amountExpenses;
 
-    setIncomes(amountIncomes.toFixed(2));
-    setExpenses(amountExpenses.toFixed(2));
-    setAmount(total.toFixed(2));
+    setIncomes(amountIncomes?.toFixed(2));
+    setExpenses(amountExpenses?.toFixed(2));
+    setAmount(total?.toFixed(2));
   }, [finances]);
 
   useEffect(() => {
