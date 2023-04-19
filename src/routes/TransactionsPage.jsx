@@ -19,8 +19,7 @@ export function TransactionsPage() {
   const [isEditing, setIsEditing] = useState(false);
   const [idEdit, setIdEdit] = useState("");
 
-  const items = localStorage.getItem("finances");
-  const [finances, setFinances] = useState([items ? JSON.parse(items) : []]);
+  const [finances, setFinances] = useState([]);
 
   const [isHome, setIsHome] = useState(false);
   const [isTransactionsPage, setIsTransactionsPage] = useState(true);
@@ -30,7 +29,6 @@ export function TransactionsPage() {
       return finance.id !== id;
     });
     setFinances(selectedItems);
-    localStorage.setItem("finances", JSON.stringify(selectedItems));
   }
 
   function handleEditing(id) {
@@ -48,6 +46,8 @@ export function TransactionsPage() {
   }
 
   useEffect(() => {
+    localStorage.setItem("finances", JSON.stringify(finances));
+
     const amountIncomes = finances
       ?.filter((finance) => {
         return !finance.isExpense;
@@ -83,9 +83,8 @@ export function TransactionsPage() {
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("finances"));
-    if (finances) {
-      setFinances(items);
-    }
+    console.log("items", items);
+    setFinances(items);
   }, []);
 
   return (
