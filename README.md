@@ -9,4 +9,4 @@
 - React Router DOM
 - Apex Charts JS
 
-(https://vitorlinsbinski.github.io/financare/)[Link]
+(https://vitorlinsbinski.github.io/financare/)
