@@ -69,9 +69,6 @@ export function Form() {
 
     if (!isEditing) {
       if (title !== "" && date !== "" && tag !== "" && value !== "") {
-        const dateRegister = new Date(date).getUTCDate();
-        console.log(dateRegister);
-
         const newFinance = [
           ...finances,
           {
@@ -83,9 +80,10 @@ export function Form() {
             tag: tag,
           },
         ];
+        console.log("new:", newFinance);
 
         let financesByDate = newFinance.sort((a, b) => {
-          return a.date - b.date;
+          return new Date(a.date) - new Date(b.date);
         });
 
         console.log("finanças pro data:", financesByDate);
@@ -133,7 +131,7 @@ export function Form() {
       });
 
       let financesByDate = newArr.sort((a, b) => {
-        return a.date - b.date;
+        return new Date(a.date) - new Date(b.date);
       });
 
       console.log("finanças por data edit:", financesByDate);
