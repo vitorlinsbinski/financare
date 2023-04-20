@@ -49,6 +49,7 @@ export function Home() {
     const toEdit = finances.find((finance) => {
       return finance.id == id;
     });
+    console.log(toEdit.date);
     setTitle(toEdit.title);
     setDate(toEdit.date);
     setTag(toEdit.tag);

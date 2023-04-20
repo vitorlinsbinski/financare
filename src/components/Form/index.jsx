@@ -69,6 +69,9 @@ export function Form() {
 
     if (!isEditing) {
       if (title !== "" && date !== "" && tag !== "" && value !== "") {
+        const dateRegister = new Date(date).getUTCDate();
+        console.log(dateRegister);
+
         const newFinance = [
           ...finances,
           {
@@ -85,8 +88,10 @@ export function Form() {
           return a.date - b.date;
         });
 
+        console.log("finanças pro data:", financesByDate);
+
         setFinances(financesByDate);
-        localStorage.setItem("finances", JSON.stringify(financesByDate));
+
         clearAll();
       } else {
         if (title == "") {
@@ -131,8 +136,9 @@ export function Form() {
         return a.date - b.date;
       });
 
+      console.log("finanças por data edit:", financesByDate);
+
       setFinances(financesByDate);
-      localStorage.setItem("finances", JSON.stringify(financesByDate));
 
       setIsEditing(false);
       clearAll();

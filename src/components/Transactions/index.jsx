@@ -52,7 +52,7 @@ export function Transactions() {
                   <TransactionItem
                     expense={finance.isExpense}
                     date={
-                      addZeroToDate(date.getDate()) +
+                      addZeroToDate(date.getUTCDate()) +
                       "/" +
                       addZeroToDate(date.getMonth() + 1) +
                       "/" +
