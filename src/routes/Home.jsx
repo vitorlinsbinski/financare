@@ -19,7 +19,19 @@ export function Home() {
   const [isEditing, setIsEditing] = useState(false);
   const [idEdit, setIdEdit] = useState("");
 
-  const [finances, setFinances] = useState([]);
+  function returnLocalStorage() {
+    const item = JSON.parse(localStorage.getItem("finances"));
+
+    if (item !== null) {
+      return item;
+    } else {
+      return [];
+    }
+  }
+
+  const item = returnLocalStorage();
+
+  const [finances, setFinances] = useState(item);
 
   const [isHome, setIsHome] = useState(true);
   const [isTransactionsPage, setIsTransactionsPage] = useState(false);
@@ -115,6 +127,8 @@ export function Home() {
         setIdEdit,
         isHome,
         isTransactionsPage,
+        handleDelete,
+        handleEditing,
       }}
     >
       <Resume></Resume>
