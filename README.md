@@ -10,3 +10,5 @@
 - Apex Charts JS
 
 [Financare Link](https://vitorlinsbinski.github.io/financare/)
+
+<img src = "./src/assets/financare_screenshot.png"></img>
