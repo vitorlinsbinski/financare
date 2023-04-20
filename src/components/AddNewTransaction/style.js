@@ -61,4 +61,36 @@ export const Modal = styled.div`
       margin-bottom: 4.5rem;
     }
   }
+
+  @media (max-width: 850px) {
+    .box {
+      max-width: 66rem;
+      height: auto;
+      padding: 6.7rem 5rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .box {
+      max-width: 66rem;
+      height: 100%;
+      padding: 2rem 1.6rem;
+
+      .closeModal {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+
+        margin-bottom: 2rem;
+      }
+    }
+  }
 `;

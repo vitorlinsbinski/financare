@@ -7,6 +7,10 @@ export const FormArea = styled.form`
   row-gap: 3.6rem;
   column-gap: 4.3rem;
   flex-wrap: wrap;
+
+  @media (max-width: 650px) {
+    justify-content: center;
+  }
 `;
 
 export const InputArea = styled.div`
@@ -80,6 +84,31 @@ export const InputArea = styled.div`
     &::-webkit-calendar-picker-indicator {
       filter: invert(1);
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 850px) {
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 24.1rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    label {
+      text-align: center;
+    }
+    &.tags {
+      ul {
+        justify-content: center;
+      }
+    }
+
+    &.typeArea {
+      .radioSelect {
+        margin: 0 auto;
+      }
     }
   }
 `;
