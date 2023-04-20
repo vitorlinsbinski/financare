@@ -89,7 +89,7 @@ export const Modal = styled.div`
         font-size: 2rem;
         line-height: 2.6rem;
 
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
     }
   }

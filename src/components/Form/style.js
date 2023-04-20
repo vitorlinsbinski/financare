@@ -11,6 +11,10 @@ export const FormArea = styled.form`
   @media (max-width: 650px) {
     justify-content: center;
   }
+
+  @media (max-width: 650px) {
+    gap: 1.6rem 2.3rem;
+  }
 `;
 
 export const InputArea = styled.div`
