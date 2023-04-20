@@ -1240,7 +1240,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         font-size: 2rem;
         line-height: 2.6rem;
 
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
     }
   }
@@ -1254,6 +1254,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   @media (max-width: 650px) {
     justify-content: center;
+  }
+
+  @media (max-width: 650px) {
+    gap: 1.6rem 2.3rem;
   }
 `,ua=Dt.div`
   &.tags {
