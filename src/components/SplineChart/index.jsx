@@ -2,6 +2,7 @@ import ApexCharts from "react-apexcharts";
 import * as S from "./style";
 import { useContext } from "react";
 import FormContext from "../../Context/FormContext";
+import { useEffect } from "react";
 
 export function SplineChart() {
   const { finances } = useContext(FormContext);
